@@ -18,8 +18,8 @@ html {
   font-size: 18px;
   background-color: #1b1919;
   max-height: 800px;
-  padding-top: 133px;
-  padding-left: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
@@ -33,14 +33,14 @@ html {
 
 .search-form {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 40px;
   justify-content: space-between;
 }
 
 .title {
   font-family: "Oswald";
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   font-weight: 700;
   font-size: 75px;
   line-height: 0.94;
@@ -64,7 +64,7 @@ html {
 
 .result__video-container {
   width: 100%;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .result__video {
@@ -109,10 +109,70 @@ html {
   text-decoration: none;
 }
 
+.search-form__fieldset {
+  border: none;
+}
+
 .search-form__fieldset-title {
   font-weight: 400;
   font-size: 18px;
 }
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__textfield {
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+  background-color: transparent;
+  height: 27px;
+  border-left: none;
+  border-right: none;
+  width: 225px;
+}
+
+.search-form__textfield::placeholder {
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: #fff;
+}
+
+.search-form__submit-button {
+  color: white;
+  font-family: "Fira Sans Condensed";
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0;
+  background-color: transparent;
+  width: 194px;
+  height: 34px;
+  border: 1px solid white;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} 
+
 
 h1,
 h2,
