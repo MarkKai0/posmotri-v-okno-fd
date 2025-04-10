@@ -52,10 +52,11 @@ html {
 }
 
 .content__list-container {
-  max-height: 298px;
+  position: relative;
+  height: 298px;
   overflow: scroll;
   padding: 3px;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 
 .content__list {
@@ -65,8 +66,9 @@ html {
 }
 
 .result__video-container {
+  position: relative;
   width: 711px;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
   height: 386px;
 }
 
@@ -93,6 +95,7 @@ html {
   flex-grow: 1;
   text-decoration: none;
   color: #FFF;
+  overflow: hidden;
 }
 
 .content__video-card-title {
@@ -102,13 +105,19 @@ html {
   font-weight: 700;
   line-height: 100%;
   padding-bottom: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.content__video-card-description{
+.content__video-card-description {
   font-family: "Fira Sans Condensed";
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
+  overflow: hidden;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
 }
 
 .content__card-link {
@@ -145,11 +154,13 @@ html {
 .search-form__fieldset-title {
   font-weight: 400;
   font-size: 18px;
+  padding-bottom: 5px;
 }
 
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
+  margin-bottom: 5px;
 }
 
 .search-form__pseudo-checkbox {
@@ -159,6 +170,7 @@ html {
   background-color: transparent;
   border: 1px solid white;
   margin-right: 5px;
+  position: relative;
 }
 
 .search-form__pseudo-checkbox::after {
@@ -167,9 +179,12 @@ html {
   height: 15px;
   background-color: #fff;
   opacity: 0;
+  position: absolute;
+  top: 1px;
+  left: 1px;
 }
 
-.search-form__pseudo-checkbox:checked {
+.search-form__checkbox:checked ~ .search-form__pseudo-checkbox::after {
   opacity: 1;
 }
 
@@ -192,6 +207,11 @@ html {
   border-right: none;
   width: 225px;
   appearance: none;
+  color: #FFF;
+  font-family: "Fira Sans Condensed";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
 }
 
 .search-form__textfield::placeholder {
@@ -232,6 +252,8 @@ html {
   background-color: #545050;
 }
 
+/* Псевдоклассы правого блока */
+
 .content__list-item:active {
   background-color: #545050;
 }
@@ -258,6 +280,14 @@ html {
   border: 1px solid white;
   color: #fff;
   margin-top: 30px;
+}
+
+.more-button:focus {
+  outline: none;
+}
+
+.more-button:focus-visible {
+  outline: 1px solid white;
 }
 
 h1,
