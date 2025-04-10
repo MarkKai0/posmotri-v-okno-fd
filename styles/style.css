@@ -37,14 +37,15 @@ ol {
   font-size: 18px;
   background-color: #1b1919;
   justify-content: center;
-  margin-top: 133px;
 }
+
+/*Будь проклято выравнивание*/
 
 .content {
   display: grid;
   grid-template-columns: 711px 399px;
   justify-content: center;
-  align-content: space-between;
+  align-content: center;
   gap: 30px;
   align-items: end;
 }
@@ -213,7 +214,7 @@ ol {
   align-items: center;
 }
 
-.search-form__label>span:hover {
+.search-form__label > input[type=checkbox]:hover ~ .search-form__label-text {
   text-decoration: underline;
 }
 
